@@ -1,7 +1,10 @@
 {
   "name": "allinfra-challenge",
   "version": "1.0.0",
-  "main": "index.js",
+  "engines": {
+    "node": ">12"
+  },
+  "main": "src/index.js",
   "author": "Gavin Ching <gavinchingy@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -9,8 +12,17 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-prettier": "^3.4.1",
     "jest": "^27.0.6",
     "prettier": "2.3.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js",
+    "try": "node src/index.js 47.6 -122.4 https://raw.githubusercontent.com/allinfra-ltd/test_oop/master/coffee_shops.csv?token=AA5HVELWEJRKDGHELZ6232DAOHE54"
+  },
+  "dependencies": {
+    "get-csv": "^3.0.3"
   }
 }
